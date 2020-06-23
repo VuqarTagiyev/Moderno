@@ -6,6 +6,7 @@
 
 html{
     font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* nav */
 #header{
@@ -18,12 +19,24 @@ html{
         width: 100%;
         display: flex;
         justify-content: space-between;
-        height: 8rem;
+        height: 7rem;
         align-items:center;
         background: skyblue;
         padding: 4rem;
-        .logo{
-            width: 20rem;
+        .nav-item{
+            display: flex;
+            .logo{
+                padding-left: 1rem;
+                img{
+                    width: 1.5rem;
+                    margin-right: .5rem;
+                }
+                .logo-title{
+                    font-size: 2rem;
+                    letter-spacing: .8rem;
+
+                }
+            }
         }
     }
 }
@@ -37,34 +50,78 @@ html{
         width: 100%;
         height: 100%;
         background: blue;
+        .recommended-first-header{
+            display: flex;
+            height:6rem;
+            background: white;
+            align-items:center;
+            justify-content: space-evenly;
+            .categories{
+                display: flex;
+                align-items:center;
+                padding: 2rem;
+                justify-content: space-between;
+                width: 15%;
+            }
+            .categories-menu{
+                display: flex;
+                align-items:center;
+                padding: 2rem;
+                justify-content: space-between;
+                width: 10%;
+            }
+            .categories-other{
+                display: flex;
+                background: red;
+                height: 100%;
+                align-items: center;
+                width: 70%;
+            }
+        }
     }
     .first-item{
         width: 20%;
+        
         // display: none;
+    }
+    .second-item{
+        padding: 5rem;
     }
 }
 .recommended-for-you{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 2rem 0;
     .recommended-item{
-        width: 42rem;
-        height: 26rem;
+        width: 31%;
+        height: 25rem;
         background: yellow;
         position: relative;
         .countable{
-            width: 12rem;
-            height: 3rem;
+            width: 11rem;
+            height: 2.5rem;
             border-radius: 3rem;
             background: black;
             display: inline-block;
             position: absolute;
             top: 2rem;
-            left: 1.2rem;
+            left: 1.5rem;
         }
         .countable-second{
-            left: 14rem;
+            left: 13.5rem;
+        }
+        img{
+            width: 15rem;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            right: -6%;
+            z-index: 2;
         }
     }
+}
+
+.active{
+    display: none !important;
 }
 

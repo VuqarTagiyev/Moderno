@@ -6,6 +6,7 @@
 
 html {
   font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* nav */
@@ -19,13 +20,24 @@ html {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 8rem;
+  height: 7rem;
   align-items: center;
   background: skyblue;
   padding: 4rem;
 }
-#header nav .logo {
-  width: 20rem;
+#header nav .nav-item {
+  display: flex;
+}
+#header nav .nav-item .logo {
+  padding-left: 1rem;
+}
+#header nav .nav-item .logo img {
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+#header nav .nav-item .logo .logo-title {
+  font-size: 2rem;
+  letter-spacing: 0.8rem;
 }
 
 /* content */
@@ -39,33 +51,76 @@ html {
   height: 100%;
   background: blue;
 }
+#content .content-item .recommended-first-header {
+  display: flex;
+  height: 6rem;
+  background: white;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#content .content-item .recommended-first-header .categories {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-between;
+  width: 15%;
+}
+#content .content-item .recommended-first-header .categories-menu {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-between;
+  width: 10%;
+}
+#content .content-item .recommended-first-header .categories-other {
+  display: flex;
+  background: red;
+  height: 100%;
+  align-items: center;
+  width: 70%;
+}
 #content .first-item {
   width: 20%;
+}
+#content .second-item {
+  padding: 5rem;
 }
 
 .recommended-for-you {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 2rem 0;
 }
 .recommended-for-you .recommended-item {
-  width: 42rem;
-  height: 26rem;
+  width: 31%;
+  height: 25rem;
   background: yellow;
   position: relative;
 }
 .recommended-for-you .recommended-item .countable {
-  width: 12rem;
-  height: 3rem;
+  width: 11rem;
+  height: 2.5rem;
   border-radius: 3rem;
   background: black;
   display: inline-block;
   position: absolute;
   top: 2rem;
-  left: 1.2rem;
+  left: 1.5rem;
 }
 .recommended-for-you .recommended-item .countable-second {
-  left: 14rem;
+  left: 13.5rem;
+}
+.recommended-for-you .recommended-item img {
+  width: 15rem;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: -6%;
+  z-index: 2;
+}
+
+.active {
+  display: none !important;
 }
 
 /*# sourceMappingURL=main.css.map */
