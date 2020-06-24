@@ -9,73 +9,175 @@
     <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
-    
-    <section id="header">
-        <nav>
-            <div class="nav-item">
-                <img src="icons/burger-menu.svg" alt="" class="burger-menu">
-                <div class="logo">
-                    <div class="logo-circle">
-                        <img src="icons/logo1.svg" alt="">
-                        <img src="icons/logo2.svg" alt="">
-                        <img src="icons/logo3.svg" alt="">
+    <div class="body-bg1"></div>
+    <div class="body-bg2"></div>
+    <div class="container">
+        <section id="header">
+            <nav>
+                <div class="nav-item">
+                    <img src="icons/burger-menu.svg" alt="" class="burger-menu" onclick = 'showMenu()'>
+                    <div class="logo">
+                        <div class="logo-circle">
+                            <img src="icons/logo1.svg" alt="">
+                            <img src="icons/logo2.svg" alt="">
+                            <img src="icons/logo3.svg" alt="">
+                        </div>
+                        <div class="logo-title">
+                            MODERNO
+                        </div>
                     </div>
-                    <div class="logo-title">
-                        MODERNO
+                </div>
+                <div class="nav-item">
+                    <div class="search-box">
+                        <img src="icons/search.svg" alt="" class="search-icon">
+                        <input type="text" placeholder="Searching for anything">
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <img src="icons/notfication.svg" alt="" class="user-notfication">
+                    <img src="images/userimage.jpg" alt="" class = 'user-image'>
+                    <div class="username">
+                        Hi, Michael <img src="icons/arrow.svg" alt="">
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <section id="content">
+            <div class="content-item first-item">
+                <div class="user-image-container">
+                    <img src="images/userimage.jpg" alt="">
+                </div>
+                <p class="content-username">Michael D. Powell</p>
+                <p class="content-nickname">Poker Master</p>
+                <div class="activty">
+                    <div>
+                        <img src="images/money.svg" alt="">
+                    </div>
+                    <div>
+                        <img src="images/magic.svg" alt="" style = "position: relative;bottom: -.5rem;width: 1.8rem">
+                    </div>
+                    <div>
+                        <img src="images/award.svg" alt="">
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <div class="count">
+                            3
+                        </div>
+                        <img src="images/menu/games.svg" alt=""> Games
+                        <ul>
+                            <li>Competitions</li>
+                            <li>Pending</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="count">
+                            3
+                        </div>
+                        <img src="images/menu/videos.svg" alt=""> Videos
+                    </li>
+                    <li>
+                        <div class="count">
+                            3
+                        </div>
+                        <img src="images/menu/games.svg" alt=""> Events
+                    </li>
+                    <li>
+                        <div class="count">
+                            3
+                        </div>
+                        <img src="images/menu/videos.svg" alt=""> Leaderboards
+                    </li>
+                </ul>
+            </div>
+            <div class="content-item second-item">
+                <div class="recommended-first-header">
+                    <div class="categories">
+                        <p>Catacories</p>
+                        <img src="icons/arrow.svg" alt="">
+                    </div>
+                    <div class="categories-other">
+                        <div>Recommended</div>
+                        <div>Trending Games</div>
+                        <div>New Releases</div>
+                    </div>
+                    <div class="categories-menu">
+                        <img src="icons/rectangle.svg" alt="">
+                        <img src="icons/rectangle1.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="recommended-second-header">
+                    <div>
+                        <p>Don’t Miss them</p>
+                        <p>Recommended for You</p>
+                    </div>
+                    <div>
+                        <button class="view-all">View all</button>
+                    </div>
+                </div>
+
+                <div class="recommended-for-you">
+
+                    <div class="recommended-item" style = 'background:#03A9F4'>
+                        <div class="countable countable-first">122,313</div>
+                        <div class="countable countable-second">
+                            <div>
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                            </div>
+                            5.0
+                        </div>
+                        <img src="images/score.png" alt="" class = 'big-img'>
+                    </div>
+
+                    <div class="recommended-item" style = 'background: #7C4DFF'>
+                        <div class="countable countable-first">3,223,423</div>
+                        <div class="countable countable-second">
+                            <div>
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                            </div>
+                            5.0
+                        </div>
+                        <img src="images/motorider.png" alt="" class = 'big-img'>
+                    </div>
+
+                    <div class="recommended-item" style = 'background:#3D5AFE'>
+                        <div class="countable countable-first">9,000,000</div>
+                        <div class="countable countable-second">
+                            <div>
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                                <img src="images/star.svg" alt="">
+                            </div>
+                            5.0
+                        </div>
+                        <img src="images/bugatti_PNG20.svg" alt="" class = 'big-img'>
+                    </div>
+                </div>
+                <div class="recommended-second-header">
+                    <div>
+                        <p>Don’t Miss them</p>
+                        <p>Recommended for You</p>
+                    </div>
+                    <div>
+                        <button class="view-all">View all</button>
                     </div>
                 </div>
             </div>
-            <div class="nav-item">
-                <input type="text">
-            </div>
-            <div class="nav-item">
-                Hi Michael
-            </div>
-        </nav>
-    </section>
-
-    <div id="content">
-        <div class="content-item first-item" style = 'background: red;'></div>
-        <div class="content-item second-item">
-            <div class="recommended-first-header">
-                <div class="categories">
-                    <p>Catacories</p>
-                    <img src="icons/arrow.svg" alt="">
-                </div>
-                <div class="categories-other">
-                    <div>Recommended</div>
-                    <div>Trending Games</div>
-                    <div></div>
-                </div>
-                <div class="categories-menu">
-                    <img src="icons/rectangle.svg" alt="">
-                    <img src="icons/rectangle1.svg" alt="">
-                </div>
-            </div>
-
-            <div class="recommended-for-you">
-
-                <div class="recommended-item">
-                    <div class="countable countable-first"></div>
-                    <div class="countable countable-second"></div>
-                    <img src="images/score.png" alt="">
-                </div>
-
-                <div class="recommended-item">
-                    <div class="countable countable-first"></div>
-                    <div class="countable countable-second"></div>
-                    <img src="images/motorider.png" alt="">
-                </div>
-
-                <div class="recommended-item">
-                    <div class="countable countable-first"></div>
-                    <div class="countable countable-second"></div>
-                    <img src="images/motorider.png" alt="">
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
-
 
     <script src = 'script.js'></script>
 </body>

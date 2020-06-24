@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.5s;
 }
 
 html {
@@ -9,47 +10,115 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  background-image: url("images/body-bg.svg");
+  background-size: cover;
+}
+
+/* container */
+.body-bg1, .body-bg2 {
+  background: #7C4DFF;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 1 !important;
+}
+
+.body-bg2 {
+  background: linear-gradient(to right, skyblue, transparent, transparent);
+  opacity: 0.9;
+}
+
+.container {
+  background: #f0f4f7;
+  z-index: 2 !important;
+  position: relative;
+  max-width: 140rem;
+  height: 80rem;
+  margin: 0 auto;
+  border-radius: 1.7rem;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+
 /* nav */
 #header {
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
 }
 #header nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 7rem;
+  height: 6rem;
   align-items: center;
-  background: skyblue;
-  padding: 4rem;
+  background: #fff;
+  padding: 3.2rem;
 }
 #header nav .nav-item {
   display: flex;
+  align-items: center;
 }
-#header nav .nav-item .logo {
-  padding-left: 1rem;
+#header nav .nav-item .burger-menu {
+  width: 1.3rem;
+  cursor: pointer;
+  margin-right: 1.4rem;
 }
 #header nav .nav-item .logo img {
-  width: 1.5rem;
+  width: 0.8rem;
   margin-right: 0.5rem;
 }
 #header nav .nav-item .logo .logo-title {
-  font-size: 2rem;
-  letter-spacing: 0.8rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem;
+  font-weight: 700;
+}
+#header nav .nav-item .search-box {
+  width: 35rem;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  background: #efeafb;
+  padding: 0 1.5rem;
+  border-radius: 4rem;
+}
+#header nav .nav-item .search-box img {
+  margin-right: 1rem;
+  width: 1.5rem;
+}
+#header nav .nav-item .search-box input {
+  width: 90%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+#header nav .nav-item .user-notfication {
+  width: 1.7rem;
+  margin-right: 3rem;
+}
+#header nav .nav-item .user-image {
+  width: 3.1rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+#header nav .nav-item .username {
+  font-size: 1.3rem;
+}
+#header nav .nav-item .username img {
+  width: 0.6rem;
+  margin-bottom: 0.3rem;
 }
 
 /* content */
 #content {
   display: flex;
-  height: 100vh;
-  padding-top: 9rem;
+  height: 73.5rem;
 }
 #content .content-item {
   width: 100%;
   height: 100%;
-  background: blue;
 }
 #content .content-item .recommended-first-header {
   display: flex;
@@ -57,6 +126,8 @@ html {
   background: white;
   align-items: center;
   justify-content: space-evenly;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 #content .content-item .recommended-first-header .categories {
   display: flex;
@@ -74,16 +145,131 @@ html {
 }
 #content .content-item .recommended-first-header .categories-other {
   display: flex;
-  background: red;
   height: 100%;
   align-items: center;
   width: 70%;
 }
+#content .content-item .recommended-first-header .categories {
+  border-bottom: 0.4px solid #707070;
+  height: 2.4rem;
+}
+#content .content-item .recommended-first-header .categories-other {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#content .content-item .recommended-first-header .categories-other div:hover {
+  border-bottom: 1px solid #F50057;
+}
+#content .content-item .recommended-second-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  width: 100%;
+}
+#content .content-item .recommended-second-header div p:nth-child(1) {
+  font-size: 1.4rem;
+}
+#content .content-item .recommended-second-header div p:nth-child(2) {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+#content .content-item .recommended-second-header div .view-all {
+  width: 6.7rem;
+  height: 2.4rem;
+  color: white;
+  background: #00D67E;
+  border: none;
+}
 #content .first-item {
   width: 20%;
+  overflow: hidden;
+  background: #F1F5F8;
+  box-shadow: 0.5px 0.5px 1px grey;
+}
+#content .first-item .user-image-container {
+  width: 100%;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 1.7rem;
+}
+#content .first-item .user-image-container img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+#content .first-item .content-username {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#content .first-item .content-nickname {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.3rem;
+  color: #3A3A3A;
+  font-weight: 400;
+  padding-top: -0.5rem;
+  text-align: center;
+}
+#content .first-item .activty {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#content .first-item .activty div {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #00E5FF;
+  border-radius: 50%;
+  display: flex;
+  margin: 0.5rem;
+  overflow: hidden;
+  align-items: flex-end;
+  justify-content: center;
+  border: none;
+}
+#content .first-item .activty div img {
+  width: 2rem;
+}
+#content .first-item ul {
+  width: 100%;
+  margin-top: 3rem;
+  list-style: none;
+}
+#content .first-item ul li {
+  width: 100%;
+  padding: 1rem;
+  padding-left: 3.3rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+  color: #3A3A3A;
+  position: relative;
+}
+#content .first-item ul li ul {
+  margin-top: 0.7rem;
+  padding-left: 0.2rem;
+}
+#content .first-item ul li .count {
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1DE9B6;
+  position: absolute;
+  border-radius: 0.1rem;
+  top: 1rem;
+  right: 1.2rem;
+}
+#content .first-item ul li img {
+  margin-right: 1.2rem;
 }
 #content .second-item {
-  padding: 5rem;
+  padding: 3rem;
 }
 
 .recommended-for-you {
@@ -92,26 +278,39 @@ html {
   padding: 2rem 0;
 }
 .recommended-for-you .recommended-item {
-  width: 31%;
-  height: 25rem;
+  width: 35rem;
+  height: 20rem;
   background: yellow;
   position: relative;
 }
 .recommended-for-you .recommended-item .countable {
-  width: 11rem;
+  width: 10.8rem;
   height: 2.5rem;
   border-radius: 3rem;
-  background: black;
+  background: #123044;
   display: inline-block;
   position: absolute;
   top: 2rem;
   left: 1.5rem;
+  z-index: 3;
+  opacity: 0.85;
+  color: white;
+  font-size: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .recommended-for-you .recommended-item .countable-second {
   left: 13.5rem;
 }
-.recommended-for-you .recommended-item img {
-  width: 15rem;
+.recommended-for-you .recommended-item .countable-second img {
+  width: 1.2rem;
+}
+.recommended-for-you .recommended-item .countable-second div {
+  margin-right: 0.5rem;
+}
+.recommended-for-you .recommended-item .big-img {
+  height: 18rem;
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -120,7 +319,7 @@ html {
 }
 
 .active {
-  display: none !important;
+  width: 0 !important;
 }
 
 /*# sourceMappingURL=main.css.map */
